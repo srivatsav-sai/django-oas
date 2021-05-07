@@ -38,7 +38,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="image/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="#" alt="#" /></div>
       </div>
       <!-- end loader --> 
       <!-- header -->
@@ -59,10 +59,10 @@
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                        <form id="content">
+                        <!-- <form id="content">
                         <input type="text" name="input" class="input" id="search-input">
                         <button type="reset" class="search" id="search-btn"></button>
-                        </form>
+                        </form> -->
                         <div class="top-box">
                         <p>An easy way to contact your attorney!</p>
                     </div>
@@ -75,7 +75,7 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="image/logo.png" alt="logo"/></a> </div>
+                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="#" alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
@@ -88,12 +88,20 @@
                             <!-- <li> <a href="All Lawyers.html">All Lawyers</a> </li> -->
                             <li> <a href="{% url 'about'%}">About</a> </li>
                             <li> <a href="{% url 'contact'%}">Contact</a> </li>
-                               
+                            <li class="nav-item">
+                                <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+                            </li>   
                            </ul>
                         </nav>
                      </div>
                   </div>
                </div>
+               <!-- <div class="col-sm-4">
+                <ul class="nav nav-pills">
+                     
+                     
+                 </ul>	     
+                </div> -->
                
             </div>
          </div>
@@ -105,7 +113,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>about</h2>
+                        <h2>About</h2>
                     </div>
                 </div>
             </div>
@@ -117,11 +125,11 @@
 <div class="about">
    <div class="container">
       <div class="row">
-         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="about_box">
+         <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+             <div class="about_box">
                <figure><img src="image/about.jpg"/></figure>
             </div>
-         </div>
+         </div> -->
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div class="about_box">
                <h3>About Us</h3>
@@ -153,21 +161,21 @@
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:90px; height:auto;" src="icon/1.png"/></i>
+                     <i><img style="width:90px; height:auto;" src="#"/></i>
                      <h3>Save Your Time</h3>
                      <p>Through this, you don't have to go to courts and search for an Attorney. You can just search up easily and book an appointment.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:115px; height:auto;" src="icon/2.png"/></i>
+                     <i><img style="width:115px; height:auto;" src="#"/></i>
                      <h3>Efficiency</h3>
                      <p>Cuts down on time, energy and money consumed to book an appointment rather than physically roam around.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:90px; height:auto;" src="icon/3.png"/></i>
+                     <i><img style="width:90px; height:auto;" src="#"/></i>
                      <h3>Easy To Do</h3>
                      <p>This website has been built by keeping 'ease of use' in mind all the time.</p>
                   </div>

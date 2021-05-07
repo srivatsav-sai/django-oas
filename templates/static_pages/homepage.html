@@ -2,6 +2,7 @@
 {% extends 'common.html' %}
 
 {% block body%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -37,7 +38,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="{% static image/loading.gif %}" alt="#" /></div>
+         <div class="loader"><img src="#" alt="#" /></div>
       </div>
       <!-- end loader --> 
       <!-- header -->
@@ -58,10 +59,10 @@
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                       <form id="content">
+                       {% comment %} <form id="content">
                         <input type="text" name="input" class="input" id="search-input">
                         <button type="reset" class="search" id="search-btn"></button>
-                        </form>
+                        </form> {% endcomment %}
                         <div class="top-box">
                         <p>An easy way to contact your attorney!</p>
                        </div>
@@ -75,11 +76,11 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="{% static image/logo.png %}" alt="logo"/></a> </div>
+                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="{% static 'image/logo.png' %}" alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-6 col-lg-6 col-md-11 col-sm-11">
+               <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11">
                   <div class="menu-area">
                      <div class="limit-box">
                         <nav class="main-menu">
@@ -88,7 +89,12 @@
                               <!-- <li> <a href="All Lawyers.html">All Lawyers</a> </li> -->
                               <li> <a href="{% url 'about'%}">About</a> </li>
                               <li> <a href="{% url 'contact'%}">Contact</a> </li>
-                              
+                              <li class="nav-item">
+								         <a class="nav-link" href='{% url "customer"%}'>My Appointments</a>
+								      </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+                              </li>
                               <!--<li class="mean-last"> <a href="#contact">signup</a> </li>-->
                                
                            </ul>
@@ -96,6 +102,14 @@
                      </div>
                   </div>
                </div>
+               {% comment %} <div class="col-sm-4">
+					     <ul class="nav nav-pills">
+							  <li class="nav-item">
+							    <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+							  </li>
+							  
+						  </ul>	     
+	       		 </div> {% endcomment %}
                <!--<div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
                   <li><a class="buy" href="#">Login</a></li>
                </div>-->
@@ -181,21 +195,21 @@
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:90px; height:auto;" src="icon/1.png"/></i>
+                     <i><img style="width:90px; height:auto;" src="https://raw.githubusercontent.com/CaleSpen/django-oas/master/static/css/icon/1.png?token=AN2LSLZ7KXOARVG3RJLHQNDASUTBS"/></i>
                      <h3>Save Your Time</h3>
                      <p>Through this, you don't have to go to courts and search for an Attorney. You can just search up easily and book an appointment.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:115px; height:auto;" src="icon/2.png"/></i>
+                     <i><img style="width:115px; height:auto;" src="https://raw.githubusercontent.com/CaleSpen/django-oas/master/static/css/icon/2.png?token=AN2LSL5Q5W7HOOEDY2XKAZTASUTEG"/></i>
                      <h3>Efficiency</h3>
                      <p>Cuts down on time, energy and money consumed to book an appointment rather than physically roam around.</p>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="for_box">
-                     <i><img style="width:90px; height:auto;" src="icon/3.png"/></i>
+                     <i><img style="width:90px; height:auto;" src="https://raw.githubusercontent.com/CaleSpen/django-oas/master/static/css/icon/3.png?token=AN2LSL4MUGHSG2BMVUNQTD3ASUTGI"/></i>
                      <h3>Easy To Do</h3>
                      <p>This website has been built by keeping 'ease of use' in mind all the time.</p>
                   </div>
@@ -219,7 +233,7 @@
             </div>
          </div>
       </div>
-      <!-- <div class="product-bg">
+       <div class="product-bg">
          <div class="product-bg-white">
          <div class="container">
             <div class="row">
@@ -263,7 +277,7 @@
          </div>
          
         
-      </div> -->
+      </div>
             </div>
          </div>
 
@@ -272,7 +286,7 @@
             <div class="row">
                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
                   <div class="yellow-box">
-                     <h3>Need Help?<i><img src="icon/calll.png"/></i></h3>
+                     <h3>Need Help?<i><img src="https://raw.githubusercontent.com/CaleSpen/django-oas/master/static/css/icon/calll.png?token=AN2LSL7UXHWVKHWMUPI344LASUTRS"/></i></h3>
                      
                      <p>Get suggestions from anywhere!.</p>
                   </div>
@@ -306,7 +320,7 @@
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                   <div class="contact">
-                     <h3>conatct us</h3>
+                     <h3>Contact us</h3>
                      <span>123 Second Street Fifth Avenue,<br>
                        Manhattan, New York<br>
                         +987 654 3210</span>

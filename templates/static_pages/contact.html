@@ -37,7 +37,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="image/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="#" alt="#" /></div>
       </div>
       <!-- end loader --> 
       <!-- header -->
@@ -58,10 +58,10 @@
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                       <form id="content">
+                       <!-- <form id="content">
                         <input type="text" name="input" class="input" id="search-input">
                         <button type="reset" class="search" id="search-btn"></button>
-                        </form>
+                        </form> -->
                         <div class="top-box">
                         <p>An easy way to contact your attorney!</p>
                     </div>
@@ -74,7 +74,7 @@
                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                   <div class="full">
                      <div class="center-desk">
-                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="image/logo.png" alt="logo"/></a> </div>
+                        <div class="logo"> <a href="{% url 'homepage'%}"><img style="width:165px; height:auto;" src="#" alt="logo"/></a> </div>
                      </div>
                   </div>
                </div>
@@ -87,12 +87,22 @@
                             <!-- <li> <a href="All Lawyers.html">All Lawyers</a> </li> -->
                             <li> <a href="{% url 'about'%}">About</a> </li>
                             <li> <a href="{% url 'contact'%}">Contact</a> </li>
-                               
+                            <li class="nav-item">
+                                <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+                            </li>  
                            </ul>
                         </nav>
                      </div>
                   </div>
                </div>
+               <div class="col-sm-4">
+                <ul class="nav nav-pills">
+                     <li class="nav-item">
+                       <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+                     </li>
+                     
+                 </ul>	     
+                </div>
             </div>
          </div>
          <!-- end header inner --> 
