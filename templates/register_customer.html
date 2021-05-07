@@ -1,0 +1,18 @@
+{% extends 'common.html' %} {% block body%}
+<div class="register_customer">
+  <div class="container height">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="Login">Sign Up an Account</h2>
+        <br />
+        <form method="post">
+          {% csrf_token %} {{ form.as_p }}
+          <button type="submit">Sign up</button>
+        </form>
+
+        <a class="regi" href="/">Back To Login</a>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

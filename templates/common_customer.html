@@ -1,0 +1,47 @@
+{% extends 'common.html' %}
+
+{% block body %}
+
+   <div class="container ">
+   	<div class="row customer_nav">
+   	             <div class="col-sm-8">            
+						     <ul class="nav nav-pills">
+							 	  <li class ="nav-item"> 
+							        <a class="nav-link" href="{% url 'homepage'%}">Home Page</a> 
+							      </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "customer"%}'>{{user_name}} Appointments</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "quick_appointmnet"%}'>Get Appointment</a>
+								  </li>
+								  <li class ="nav-item"> 
+							        <a class="nav-link" href="{% url 'about'%}">About</a> 
+							      </li>
+								  <li class ="nav-item"> 
+							        <a class="nav-link" href="{% url 'contact'%}">Contact Us</a> 
+							      </li>
+								  
+							  </ul>	                             
+                  </div>
+
+                 <div class="col-sm-4">
+					     <ul class="nav nav-pills">
+							  <li class="nav-item">
+							    <a class="nav-link" href='{% url "logout"%}'>Log Out</a>
+							  </li>
+							  
+						  </ul>	     
+	       		 </div>
+	  </div>
+    </div>
+
+    {% block common_customer %}
+    
+    {% endblock common_customer %}
+
+{% endblock %}
+
+
+
+
