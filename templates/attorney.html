@@ -28,7 +28,7 @@
                                     <th scope="col">Date</th>
                                     <th scope="col">Time</th>
                                     <th scope="col">Room Number</th>
-                                    <th scope="col"><a href ="">Delete</a> </th>
+                                    <!-- <th scope="col"><a href ="">Delete</a> </th> -->
                                     
                                   </tr>
                                 </thead>{% for appoint in query %}
@@ -40,7 +40,7 @@
                                           <td>{{appoint.date}}</td>
                                           <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
                                           <td>{{appoint.room_number}}</td>
-                                          <td>{{appoint.room_number}}</td>
+                                          <td><a href ="{% url 'appointment_delete' id=appoint.id %}">Delete</a></td>
                                   </tr>{% endif %}
                                 </tbody>{% endfor %}
                             </table>
