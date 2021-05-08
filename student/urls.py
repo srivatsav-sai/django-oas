@@ -18,5 +18,8 @@ urlpatterns = [
     path('homepage/', TemplateView.as_view(template_name='static_pages/homepage.html'), name='homepage'),
     path('contact/', TemplateView.as_view(template_name='static_pages/contact.html'), name='contact'),
     path('about/', TemplateView.as_view(template_name='static_pages/about.html'), name='about'),
-      
+    path('lawyer_a/', TemplateView.as_view(template_name='static_pages/lawyer_a.html'), name='lawyer_a'),
+    path('Lawyer2/', TemplateView.as_view(template_name='static_pages/Lawyer2.html'), name='Lawyer2'),
+    path('Lawyer3/', TemplateView.as_view(template_name='static_pages/Lawyer3.html'), name='Lawyer3'),
+    path('Lawyer4/', TemplateView.as_view(template_name='static_pages/Lawyer4.html'), name='Lawyer4'),
 ]

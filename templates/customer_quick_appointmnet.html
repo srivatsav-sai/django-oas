@@ -25,7 +25,7 @@
                                  <thead>
                                   <tr>
                                     <th scope="col">Attorney Name</th>
-                                    <th scope="col">Profile Picture</th>
+                                    <!-- <th scope="col">Profile Picture</th> -->
                                     <th scope="col">Date</th>
                                     <th scope="col">Available Time</th>
                                   </tr>
@@ -34,7 +34,7 @@
                                   {% if appoint.appointment_with == '' %} <!--only bookabe appointment-->
                                   <tr>
                                     <th scope="row">{{appoint.user}}</th>
-                                    <td><img class="avatar" src="{% static 'icon/p1.png' %}"></td>
+                                    <!-- <td><img class="avatar" src="{% static 'icon/p2.png' %}"></td> -->
                                     <td>{{appoint.date}}</td>
                                     <td> 
                                       <span class="inline">{{appoint.time_start}} - {{appoint.time_end}} 
