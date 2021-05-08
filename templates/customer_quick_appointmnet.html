@@ -1,6 +1,7 @@
 {% extends 'common_customer.html' %}
 
 {% block common_customer %}
+{% load static %}
 
    <div class="customer">
            <div class="container">
@@ -33,7 +34,7 @@
                                   {% if appoint.appointment_with == '' %} <!--only bookabe appointment-->
                                   <tr>
                                     <th scope="row">{{appoint.user}}</th>
-                                    <td><img class="avatar" src="http://127.0.0.1:8000/static/css/image/teacher.png"></td>
+                                    <td><img class="avatar" src="{% static 'icon/p1.png' %}"></td>
                                     <td>{{appoint.date}}</td>
                                     <td> 
                                       <span class="inline">{{appoint.time_start}} - {{appoint.time_end}} 
