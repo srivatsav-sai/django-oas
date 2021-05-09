@@ -730,6 +730,7 @@ nav.main-menu {
 	padding: 12px 5px;
 	position: relative;
 	border-bottom: solid #eee 1px;
+	
 }
 
 .main-menu ul>li .sub-down li a::before {}
